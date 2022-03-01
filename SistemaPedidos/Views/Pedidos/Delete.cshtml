@@ -1,0 +1,73 @@
+﻿@model SistemaPedidos.Models.Pedido
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+    <p></p>
+<h2>Borrar</h2>
+
+<h3>¿Seguro que quieres borrar el registro?</h3>
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorreoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Moneda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moneda)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-danger" /> 
+            @Html.ActionLink("Regresar", "Index", "Pedidos", new { @class = "btn btn-outline-primary" })
+        </div>
+    }
+</div>

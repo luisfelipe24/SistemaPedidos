@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title - Gestión Pedidos</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fa fa fa-shopping-cart"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">GESTIÓN PEDIDOS <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Funciones
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Cuenta</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Opciones:</h6>
+                        <a class="collapse-item" href="../Account/Login">Login</a>
+                        <a class="collapse-item" href="../Account/Register">Registro</a>
+                        <a class="collapse-item" href="Olvido-Contraseña.html">Olvido la Contraseña</a>
+                        <div class="collapse-divider"></div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - au -->
+            <li class="nav-item">
+                <a class="nav-link" href="../../Usuarios">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Administrar Usuarios</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - cp -->
+            <li class="nav-item">
+                <a class="nav-link" href="../../Pedidos/Create">
+                    <i class="fas fa-paperclip"></i>
+                    <span>Crear Pedidos</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - vp -->
+            <li class="nav-item">
+                <a class="nav-link" href="../../Pedidos/Ver">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Ver Pedidos</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - vp -->
+            <li class="nav-item">
+                <a class="nav-link" href="../../Home/about">
+                    <i class="fas fa-dochub"></i>
+                    <span>Generar Pedido en PDF</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - ep -->
+            <li class="nav-item">
+                <a class="nav-link" href="../../Pedidos">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Editar Pedidos</span>
+                </a>
+            </li>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+        </ul>
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Gestión Pedidos</p>
+            </footer>
+        </div>
+
+    </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿@model SistemaPedidos.Models.Pedido
+
+@{
+    ViewBag.Title = "Detailes";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorreoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Moneda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moneda)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    
+    @Html.ActionLink("Regresar", "Ver", "Pedidos", new { @class = "btn btn-outline-primary" })
+</p>

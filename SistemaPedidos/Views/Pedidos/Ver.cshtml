@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SistemaPedidos.Models.Pedido>
+
+@{
+    ViewBag.Title = "Ver";
+}
+
+    <p> </p>
+
+<h2>Ver Pedidos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaPedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorreoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moneda)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaPedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorreoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moneda)
+        </td>
+        <td>
+            @Html.ActionLink("Detalles", "Details", new { id=item.PedidoID }, new { @class = "btn btn-info" }) 
+        </td>
+    </tr>
+}
+
+</table>

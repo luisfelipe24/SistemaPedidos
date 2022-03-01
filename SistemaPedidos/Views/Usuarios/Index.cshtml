@@ -1,0 +1,46 @@
+﻿@model IEnumerable<SistemaPedidos.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <p></p>
+    <h2>Administrar Usuarios</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create", "Usuarios", new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreUsu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contraseña)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreUsu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contraseña)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UsuarioID }, new { @class = "btn btn-warning" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.UsuarioID }, new { @class = "btn btn-info" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.UsuarioID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+   
+</table>
